@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Details</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .movie {
+            padding: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        body.dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        
+        body.dark-mode button {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="movie">
+        <h1>Avengers: Endgame</h1>
+
+        <p>Genre: Action, Adventure, Sci-Fi</p>
+        <p>Rating: 4.5/5</p>
+
+        <button onclick="toggleMode()">Light / Dark Mode</button>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>

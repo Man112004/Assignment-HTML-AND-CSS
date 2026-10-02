@@ -1,0 +1,12 @@
+Open myprofile.html in Chrome.
+Right-click your name.
+Click Inspect.
+In the Styles section, click inside an empty area.
+Type:
+background-color: yellow;
+
+Your name will immediately get a yellow background.
+
+You can use another color too:
+
+background-color: lightblue;

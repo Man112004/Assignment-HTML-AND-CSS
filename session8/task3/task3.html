@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Product Card</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .card {
+            width: 700px;
+            margin: 30px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            display: flex;
+            gap: 20px;
+            font-family: Arial;
+        }
+        
+        .card img {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .details {
+            font-size: 20px;
+        }
+        
+        @media only screen and (max-width: 1200px) {
+            .card {
+                padding: 25px;
+            }
+            .details {
+                font-size: 18px;
+            }
+        }
+        
+        @media only screen and (max-width: 900px) {
+            .card {
+                padding: 20px;
+            }
+            .details {
+                font-size: 16px;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .card {
+                width: 80%;
+                padding: 15px;
+                flex-direction: column;
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+            .details {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img src="laptop.jpg" alt="Laptop">
+
+        <div class="details">
+            <h2>HP Laptop</h2>
+            <p>Intel Core i5 | 8 GB RAM | 512 GB SSD</p>
+            <h3>₹49,999</h3>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

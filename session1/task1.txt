@@ -1,0 +1,2 @@
+Tag Name: img
+Class: The class shown in Chrome DevTools for the selected Instagram image.

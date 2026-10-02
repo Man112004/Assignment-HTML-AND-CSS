@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Grid</title>
+
+    <style>
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .product {
+            border: 1px solid gray;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .product img {
+            width: 150px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Flipkart Products</h2>
+
+    <section class="products">
+
+        <div class="product">
+            <img src="mobilw.jpg" alt="Mobile">
+            <h3>Smartphone</h3>
+        </div>
+
+        <div class="product">
+            <img src="laptop.jpg" alt="Laptop">
+            <h3>Laptop</h3>
+        </div>
+
+        <div class="product">
+            <img src="headphones.jpg" alt="Headphones">
+            <h3>Headphones</h3>
+        </div>
+
+        <div class="product">
+            <img src="watch.jpg" alt="Watch">
+            <h3>Smart Watch</h3>
+        </div>
+
+        <div class="product">
+            <img src="shoes.jpg" alt="Shoes">
+            <h3>Shoes</h3>
+        </div>
+
+        <div class="product">
+            <img src="bag.jpg" alt="Bag">
+            <h3>Travel Bag</h3>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

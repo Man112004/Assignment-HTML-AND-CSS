@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Product</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .card {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            gap: 20px;
+            font-family: Arial;
+        }
+        
+        .card img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .details {
+            padding: 10px;
+        }
+        
+        .price {
+            color: green;
+            font-size: 22px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .card {
+                width: 80%;
+                flex-direction: column;
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img src="mobile.jpg" alt="Mobile">
+
+        <div class="details">
+            <h2>Samsung Galaxy Mobile</h2>
+            <p>8 GB RAM | 128 GB Storage</p>
+            <p class="price">₹19,999</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reusable CSS Class</title>
+
+    <style>
+        /* Reusable class avoids writing the same
+           margin and padding values multiple times.
+           This makes CSS easier to maintain. */
+        
+        .spacing {
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .restaurant-card {
+            width: 300px;
+            border: 2px solid #ddd;
+        }
+        
+        .restaurant-name {
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .cuisine {
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="restaurant-card spacing">
+
+        <h2 class="restaurant-name spacing">
+            The Food House
+        </h2>
+
+        <p class="cuisine spacing">
+            North Indian, Chinese
+        </p>
+
+        <p class="spacing">
+            Rating: ⭐ 4.5
+        </p>
+
+    </div>
+
+</body>
+
+</html>
