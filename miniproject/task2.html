@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamer Tag</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+        
+        .profile {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .links a {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        
+        .twitch {
+            border-left: 5px solid purple;
+        }
+        
+        .discord {
+            border-left: 5px solid blue;
+        }
+        
+        .steam {
+            border-left: 5px solid #66c0f4;
+        }
+        
+        @media (min-width: 700px) {
+            .links {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .links a {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile">
+
+        <img class="avatar" src="https://via.placeholder.com/120" alt="Gamer Avatar">
+
+        <h1>ProGamer</h1>
+        <p>🎮 Gaming | Streaming | Esports</p>
+
+        <div class="links">
+            <a class="twitch" href="#" target="_blank">Twitch</a>
+            <a class="discord" href="#" target="_blank">Discord</a>
+            <a class="steam" href="#" target="_blank">Steam</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

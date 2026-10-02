@@ -1,0 +1,18 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.product-img {
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.card {
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}

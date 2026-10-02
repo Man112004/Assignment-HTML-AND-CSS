@@ -1,0 +1,9 @@
+body {
+    background-color: #f5f3ff;
+}
+
+.artist-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}

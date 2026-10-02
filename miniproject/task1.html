@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music Links</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+        
+        form,
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .card {
+            border-left: 5px solid green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Music Links Form</h2>
+
+    <form id="musicLinksForm">
+        <input type="url" id="spotify" placeholder="Spotify URL">
+        <input type="url" id="youtube" placeholder="YouTube Music URL">
+        <input type="url" id="apple" placeholder="Apple Music URL">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="preview"></div>
+
+    <script>
+        document.getElementById("musicLinksForm").onsubmit = function(e) {
+            e.preventDefault();
+
+            let links = [
+                ["Spotify", document.getElementById("spotify").value],
+                ["YouTube Music", document.getElementById("youtube").value],
+                ["Apple Music", document.getElementById("apple").value]
+            ];
+
+            document.getElementById("preview").innerHTML = "";
+
+            links.forEach(function(item) {
+                if (item[1] != "") {
+                    document.getElementById("preview").innerHTML +=
+                        `<div class="card">
+                    <h3>${item[0]}</h3>
+                    <p>${item[1]}</p>
+                    <a href="${item[1]}" target="_blank">
+                        <button>Visit</button>
+                    </a>
+                </div>`;
+                }
+            });
+        };
+    </script>
+
+</body>
+
+</html>

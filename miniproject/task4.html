@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Social Preview</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eee;
+            padding: 20px;
+        }
+        
+        form,
+        .card {
+            max-width: 500px;
+            margin: 15px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 8px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .instagram {
+            border: 3px solid #e1306c;
+        }
+        
+        .linkedin {
+            border: 3px solid #0077b5;
+        }
+        
+        .twitter {
+            border: 3px solid #1da1f2;
+        }
+        
+        .logo {
+            width: 40px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="socialForm">
+
+        <h2>Social Links</h2>
+
+        <input id="instagram" type="url" placeholder="Instagram URL">
+
+        <input id="linkedin" type="url" placeholder="LinkedIn URL">
+
+        <input id="twitter" type="url" placeholder="Twitter URL">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <div id="cards"></div>
+
+    <script>
+        document.getElementById("socialForm").onsubmit = function(e) {
+
+            e.preventDefault();
+
+            let platforms = [{
+                name: "Instagram",
+                id: "instagram",
+                class: "instagram",
+                logo: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            }, {
+                name: "LinkedIn",
+                id: "linkedin",
+                class: "linkedin",
+                logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            }, {
+                name: "Twitter",
+                id: "twitter",
+                class: "twitter",
+                logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png"
+            }];
+
+            document.getElementById("cards").innerHTML = "";
+
+            platforms.forEach(function(platform) {
+
+                let url = document.getElementById(platform.id).value;
+
+                if (url != "") {
+
+                    let parts = url.split("/");
+                    let username = parts[parts.length - 1];
+
+                    document.getElementById("cards").innerHTML +=
+                        `<div class="card ${platform.class}">
+                <img class="logo" src="${platform.logo}">
+                <h3>${platform.name}</h3>
+                <p>Username: @${username}</p>
+                <a href="${url}" target="_blank">
+                    <button>Visit</button>
+                </a>
+            </div>`;
+                }
+            });
+        };
+    </script>
+
+</body>
+
+</html>
